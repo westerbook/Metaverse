@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>用户登录页面</title>
+<link rel="stylesheet" href="css/login.css">
+<script>
+    $(function () {
+        // 初始时刻隐藏手机号验证码，显示用户名密码
+         $('.login-box').hide();
+        $('.login-box').first().show();
+        // 显示或隐藏登录方式
+        $('.login-method').each(function (i) {
+            $(this).click(function () {
+                $('.login-box').hide();
+                $('.login-box').eq(i).show();
+            })
+        })
+    })
+</script>
+</head>
+<body style="background-repeat:no-repeat
+      background-attachment:fixed;
+      background-size:100% 100%; ">
+	<div class="content-1-22">
+<div class="login-bg"> </div>
+<div class="login-box-wrapper">
+  <div class="login-title"> <span class="login-method">用户名|密码</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="login-method">手机号|验证码</span> </div>
+  <div class="hr-line-div"></div>
+  <form action="" class="login-box">
+    <p class="paragraph">用户名：</p>
+    <p>
+      <input type="text" placeholder="请输入用户名" name="username">
+    </p>
+    <p class="paragraph">密码：</p>
+    <p>
+      <input type="password" placeholder="请输入密码" name="password">
+    </p>
+    <p>
+      <input type="submit" class="login-btn" value="立即登录">
+      <input type="button" class="login-btn" value="返回首页">
+    </p>
+  </form>
+  <form action="" class="login-box">
+    <p class="paragraph">手机号：</p>
+    <p>
+      <input type="text" placeholder="请输入手机号" name="phone">
+    </p>
+    <p class="paragraph">验证码：</p>
+    <p>
+      <input type="text" placeholder="请输入验证码" name="checkcode" id="checkcode">
+      <input type="button" id="mybtn" value="获取验证码">
+    </p>
+    <p>
+      <input type="submit" class="login-btn" value="立即登录">
+      <input type="button" class="login-btn" value="返回首页">
+    </p>
+  </form>
+</div>
+</div>
+</body>
+</html>
